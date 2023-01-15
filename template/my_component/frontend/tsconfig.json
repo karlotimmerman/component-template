@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es", // compile to ES5 code
+    "target": "ES5", // compile to ES5 code
     "lib": ["dom", "dom.iterable", "esnext"], // include dom library
     "allowJs": true, // allow javascript files
     "skipLibCheck": true, // skip type checking of all declaration files
