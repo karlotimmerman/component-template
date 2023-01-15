@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "target": "es", // compile to ES5 code
+    "lib": ["dom", "dom.iterable", "esnext"], // include dom library
+    "allowJs": true, // allow javascript files
+    "skipLibCheck": true, // skip type checking of all declaration files
+    "esModuleInterop": true, // enable interop between ES6 modules and CommonJS
+    "allowSyntheticDefaultImports": true, // allow default imports from modules with no default export
+    "strict": true, // enable all strict type-checking options
+    "forceConsistentCasingInFileNames": true, // ensure casing consistency in imports
+    "module": "esnext", // set module code generation to ESNext
+    "moduleResolution": "node", // set module resolution to node
+    "resolveJsonModule": true, // enable importing json files
+    "isolatedModules": true, // report errors on imports, exports and JSX
+    "noEmit": true, // do not emit outputs
+    "jsx": "react" // enable JSX and set the JSX factory to "React.createElement"
   },
-  "include": ["src"]
+  "include": ["src"] // include all files in the src/ directory
 }
