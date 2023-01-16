@@ -32,31 +32,30 @@ class MyComponent
       </span>
     )
   }
-
-  /** Click handler for our "Click Me!" button. */
-  private onClicked = (): void => {
-    // Increment state.numClicks, and pass the new value back to
-    // Streamlit via `Streamlit.setComponentValue`.
-    this.setState(
-      prevState => ({ numClicks: prevState.numClicks + 1 }),
-      () => Streamlit.setComponentValue(this.state.numClicks)
-    )
-  }
-
-  /** Focus handler for our "Click Me!" button. */
-  private _onFocus = (): void => {
-    this.setState({ isFocused: true })
-  }
-
-  /** Blur handler for our "Click Me!" button. */
-  private _onBlur = (): void => {
-    this.setState({ isFocused: false })
-  }
 }
 
-// "withStreamlitConnection" is a wrapper function. It bootstraps the
-// connection between your component and the Streamlit app, and handles
-// passing arguments from Python -> Component.
-//
-// You don't need to edit withStreamlitConnection (but you're welcome to!).
-export default withStreamlitConnection(MyComponent)
+ /** Click handler for our "Click Me!" button. */
+private onClicked = (): void => {
+  // Increment state.numClicks, and pass the new value back to
+  // Streamlit via `Streamlit.setComponentValue`.
+  this.setState(
+    prevState => ({ numClicks: prevState.numClicks + 1 }),
+    () => Streamlit.setComponentValue(this.state.numClicks)
+  )
+}
+
+/** Focus handler for our "Click Me!" button. */
+private _onFocus = (): void => {
+  this.setState({ isFocused: true })
+}
+
+/** Blur handler for our "Click Me!" button. */
+private _onBlur = (): void => {
+  this.setState({ isFocused: false })
+}
+
+
+import React, { Component } from "react"
+import withStreamlitConnection from "./withStreamlitConnection"
+
+// "MyComponent"
